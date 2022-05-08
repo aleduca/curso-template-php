@@ -1,0 +1,21 @@
+{
+    "name": "alexandrexandecar/template",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "scripts":{
+        "server":"php -S localhost:8000 -t public"
+    },
+    "authors": [
+        {
+            "name": "Alexandre Cardoso",
+            "email": "xandecar@hotmail.com"
+        }
+    ],
+    "require": {},
+    "config":{
+        "process-timeout":0
+    }
+}

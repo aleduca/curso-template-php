@@ -1,0 +1,373 @@
+/* Estilização Página de Login */
+
+.container, .container-dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container-left, .container-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-left {
+    background-color: var(--bg-secondary);
+}
+
+.logo-img {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    animation: bounceInDown;
+    animation-duration: 1s;
+}
+
+.logo-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 30px;
+
+    animation: bounceInLeft;
+    animation-duration: 1s;
+}
+
+.logo-text h3 {
+    font: normal 400 2.25rem 'Poppins';
+}
+
+.logo-text h1 {
+    font: normal 700 3rem 'Poppins';
+}
+
+.container-right {
+    justify-content: center;
+}
+
+.container-right h1 {
+    color: #FFF;
+    margin: 40px 0;
+    font: normal 500 2.25rem 'Poppins';
+
+    animation: bounceInDown;
+    animation-duration: 1s;
+}
+
+.form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.form-login div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    padding: 10px;
+    position: relative;
+
+    animation: backInLeft;
+    animation-duration: 1s;
+}
+
+.form-login div > label {
+    color: white;
+    margin: 5px 0;
+}
+
+.form-login div .iconFeather {
+    position: absolute;
+    top: 58px;
+    right: 30px;
+    color: white;
+}
+
+.form-login button {
+    margin: 30px 0;    
+    transition: 0.5s ease-out;
+}
+
+.form-login button:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilização responsiva da página de Login */
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container-left, .container-right {
+        width: 100%;
+    }
+
+    .container-left {
+        height: 30%;
+        background-color: var(--bg-princial);
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container-left .logo-text {
+        display: none;
+    }
+
+    .container-right {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .container-right h1 {
+        margin: 0 auto;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .form-login div {
+        width: 80%;
+    }
+}
+
+
+/* Estilização da página princial */
+
+.mobile {
+    display: none!important;
+}
+
+.container-aside {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-aside-logo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-aside-logo svg {
+    display: none;
+}
+
+.container-aside-logo img {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+.container-aside-menu {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-aside-menu h1{
+    width: 100%;
+    height: 10%;
+    padding: 15px;
+    font: normal bold 1.25rem 'Source Sans Pro';
+    color: white;
+}
+
+.container-aside-menu-nav {
+    width: 100%;
+    height: 90%;
+}
+
+.container-aside-menu-nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-aside-menu-nav ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.container-aside-menu-nav ul li a{
+    width: 100%;
+    padding: 10px 20px;
+    color: var(--font-color-link);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font: normal 500 1rem 'Poppins';
+}
+
+.container-aside-menu-nav ul li .active {
+    border-left: 8px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.container-aside-logout {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+}
+
+.container-aside-logout-btn {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--font-color-link);
+}
+
+.container-aside-logout-btn a {
+    color: var(--font-color-link);
+    font: normal 500 1rem 'Poppins';
+}
+
+.container-aside-logout-btn a:hover {
+    transition: 0.5s;
+    color: white;
+}
+
+.container-aside-logout::before {
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: #CCCCCC;
+
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+
+.container-section-principal {
+    width: 85%;
+    height: 100%;
+    background: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+}
+
+.container-section-principal svg {
+    cursor: pointer;
+    margin: 20px 40px;
+    display: none;
+}
+
+.container-section-principal-header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 40px;
+}
+
+.container-section-principal-header h1 {
+    color: black;
+    font: normal bold 2.25rem 'Source Sans Pro';
+}
+
+.container-section-principal-header h3 {
+    color: #9F9D9D;
+    font: normal 300 1.5rem 'Source Sans Pro';
+}
+
+.container-section-principal-content {
+    width: 100%;
+    height: 85%;
+}
+
+
+@media (max-width: 1000px) {
+    .container-aside {
+       display: none;
+    } 
+
+   .container-aside.active {
+        display: flex;
+        width: 30%;
+        height: 100%;
+        background-color: var(--bg-princial);
+        position:absolute;
+        top: 0;
+        left: 0;
+        
+        animation: animaEntrada 0.5s;
+   }
+
+   @keyframes animaEntrada {
+       from {
+            width: 0%;
+            transition: 0.5s;
+       }
+
+       to {
+            width: 30%;
+            transition: 0.5s;
+       }
+   }
+
+   .container-aside.active .container-aside-logo {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+   }
+
+   .container-aside.active .container-aside-logo svg {
+       display: flex;
+       text-align: end;
+       color: white;
+       cursor: pointer;
+       margin: 0px 20px 20px 0px;
+   }
+   
+   .container-section-principal {
+       width: 100%;
+   }
+   
+   .container-section-principal svg {
+       display: flex;
+       width: 30px;
+       height: 30px;
+   }
+}
+
+@media (max-width: 600px) {
+    .container-aside.active {
+        width: 60%;
+    }
+}

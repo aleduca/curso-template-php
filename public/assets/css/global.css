@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('./styles.css');
+:root{
+    /* Cores de Background */
+    --bg-princial: #171923;
+    --bg-secondary: rgba(255,255,255, 0.95);
+    --bg-input-dark: #000000;
+    --bg-btn-login: linear-gradient(90.42deg, #FE0000 0.36%, rgba(92, 8, 232, 0) 119.95%);
+    --bg-alert-success: #DEFEE8;
+    --bg-alert-error: #F9BEC3;
+    --bg-alert-warning: #EFBE9B;
+    --btn-success: #23B14D;
+    --btn-edit: #0081FF;
+    --btn-delete: #FE0000;
+    
+    /* Cores de Fonte */
+    --font-color-placeholder: rgba(255,255,255, 0.60);
+    --font-color-link: #cccccc;
+    --font-color-error: #FE0000;
+    --font-color-warning: #FF6B01;
+    --font-color-success: #23B14D;
+
+
+    /* Drop shadow */
+    --btn-drop-shadow:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+}
+
+/* Estilizações Gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+html, body {
+    background-color: var(--bg-princial);
+    height: 100vh;
+}
+
+
+/* Estilizações utilizadas para inputs de formulários */
+
+.input {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.input::placeholder {
+    color: var(--font-color-placeholder);
+}
+
+.input-dark {
+    background-color: var(--bg-input-dark);
+    color: white;
+}
+
+.input-sans {
+    font-family: 'Source Sans Pro';
+}
+
+
+/* Estilizações utilizadas para botões */
+
+.btn {
+    width: 30%;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font: normal 700 1.25rem 'Poppins';
+    cursor: pointer;
+
+    animation: backInUp;
+    animation-duration: 1s;
+}
+
+.btn-login {
+    background-image: linear-gradient(to right, rgb(254,0,0) 0.36%, rgb(49, 20, 69) 119.95%);
+}
+
+.btn-save {
+    background: var(--btn-success);
+}
+
+.btn-edit {
+    background: var(--btn-edit);
+}
+
+.btn-delete {
+    background: var(--btn-delete);
+}
+
+
+/* Estilizações utilizadas para validações que deram erro */
+.error {
+    color: var(--font-color-error)!important;
+}
+
+.input-error {
+    border: 2px solid var(--font-color-error)
+}
+
+.text-error {
+    font: italic 300 0.87rem 'Poppins';
+    margin: 5px 0;
+}
+
+
+/* Estilizações para alertas */
+
+.alert {
+    width: 65%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-left: 50px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+    gap: 5px;
+    font: normal normal 1.25rem 'Poppins';
+}
+
+.alert-error {
+    background-color: var(--bg-alert-error);
+    border-left-color: var(--font-color-error);
+    color: var(--font-color-error);
+}
+
+.alert-warning {
+    background-color: var(--bg-alert-warning);
+    border-left-color: var(--font-color-warning);
+    color: var(--font-color-warning);
+}
+
+.alert-success {
+    background-color: var(--bg-alert-success);
+    border-left-color: var(--font-color-success);
+    color: var(--font-color-success);
+}
+
+@media (max-width:1200px) {
+    .alert {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+}

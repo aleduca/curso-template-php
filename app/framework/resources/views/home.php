@@ -32,11 +32,11 @@
             <form class="form-login" method="post" action="/login">
                 <div>
                     <label>Usuário:</label>
-                    <input type="text" name="username" placeholder="Ex.: usuarioteste" class="input input-dark">
+                    <input type="text" name="email" placeholder="Ex.: usuarioteste" class="input input-dark" value="salazar.horacio@hotmail.com">
                 </div>
                 <div id="passwordContainer">
                     <label>Senha:</label>
-                    <input id="password" name="password" type="password" placeholder="Ex.: senhateste"
+                    <input id="password" name="password" type="password" placeholder="Ex.: senhateste" value="123"
                         class="input input-dark">
                     <i data-feather="eye-off" class="iconFeather"></i>
                 </div>

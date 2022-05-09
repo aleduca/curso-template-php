@@ -17,7 +17,9 @@
             "email": "xandecar@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    },
     "config":{
         "process-timeout":0
     }

@@ -12,4 +12,9 @@ class Macros
     {
         return strtoupper($value);
     }
+
+    public function session(string $session)
+    {
+        return $_SESSION[$session] ?? '';
+    }
 }

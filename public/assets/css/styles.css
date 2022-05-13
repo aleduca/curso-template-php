@@ -305,6 +305,8 @@
 
 .container-section-principal-content {
     width: 100%;
+    margin-left: 40px;
+    margin-top: 20px;
     height: 85%;
 }
 

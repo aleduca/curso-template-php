@@ -8,7 +8,9 @@
     <h1>Menu</h1>
     <nav class="container-aside-menu-nav">
         <ul>
-            <li><a href="#" class="active"><i data-feather="home"></i> Início</a></li>
+            <li><a href="/dashboard" class="active"><i data-feather="home"></i> Início</a></li>
+            <li><a href="/dashboard/contas" class="active"><i data-feather="home"></i> Contas</a></li>
+            <?php $this->section('menu') ?>
         </ul>
     </nav>
 </section>

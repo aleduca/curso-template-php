@@ -1,4 +1,8 @@
 <?php $this->extends('dashboard', ['title' => $title]); ?>
-<h2>Home</h2>
+<h2>Users</h2>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae expedita esse facere doloribus, corporis dolorum ad minima sunt ab laboriosam tenetur, cupiditate possimus? Molestias beatae corporis itaque quod sed?</p>
+<ul>
+    <?php foreach ($users as $user): ?>
+        <li><?php echo $user->firstName; ?></li>    
+    <?php endforeach; ?>    
+</ul>

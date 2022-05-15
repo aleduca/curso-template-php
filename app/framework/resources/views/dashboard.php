@@ -29,5 +29,7 @@
 
         </section>
     </section> 
+
+    <script src="app.js"></script>
 </body>
 </html>

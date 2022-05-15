@@ -21,12 +21,10 @@ class Cache
     {
         $cachePath = self::path($cacheName);
         if (!file_exists($cachePath) || strtotime("+{$expiration} minutes", filemtime($cachePath)) < strtotime('now')) {
-            var_dump('guardou no cache e retorno o valor do callback');
             file_put_contents($cachePath, json_encode($callback()));
             return $callback();
         }
         
-        var_dump('retornou o cache');
         return (array)json_decode(file_get_contents($cachePath));
     }
 }
